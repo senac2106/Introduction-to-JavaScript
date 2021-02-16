@@ -17,6 +17,12 @@ Do the following:
 
    HINT: no function required
 */
+var votinage = 18;
+if(votinage >=18){
+console.log("You can vote")
+}else{
+  console.log("You are a minor")
+}
 
 
 
@@ -30,11 +36,6 @@ Do the following:
 
    HINT: no function required
 */
-
-
-
-
-
 /*
 Task 1c - Convert Strings to Numbers
 
@@ -45,6 +46,8 @@ Do the following:
 
    HINT: look up the Number method
 */
+const year = '1999';
+console.log(parseInt(year));
 
 
 
@@ -58,9 +61,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
+function multiply(num1, num2){
+  return num1 * num2;
     /*add your code here*/
-  }
+  };
+console.log(multiply(7, 8));
 
 
 
@@ -74,9 +79,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
+function dogYears(years){
+  return years * 7;
     /*add your code here*/
-}
+};
+console.log(dogYears(5));
 
 
 
@@ -107,9 +114,6 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
 
 
 
@@ -133,11 +137,42 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+userchoise = prompt( "what you choose");
+computerchoise = Math.random();
+console.log(computerchoise);
 
-function game(user, computer){
-    /*add your code here*/
+if (computerchoise<=.33){
+  computerchoise="rock";
 }
-  
+else if(computerchoise>.34 && computerchoise<.66){
+  computerchoise="paper";
+}
+else{
+  computerchoise="scissors";
+}console.log("computer: " + computerchoise);
+
+var compare = function (result1, result2){
+if(result1 === result2){
+  return "Its a tie"
+}
+else if(result1 === "rock"){
+  if(result2 === "scissors"){
+    return "rock wins";
+  }
+  else{
+    return "paper wins";
+  }
+}
+else if(result2==="paper"){
+  if(result2==="rock"){
+    return"paper wins"
+  }
+  else{
+    return "scissors win";
+  }
+}
+}
+  compare(userchoise, computerchoise);
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -151,9 +186,11 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
+function miles(kilometers){
+  return kilometers * 0.621371;
     /*add your code here*/
-  }
+  };
+  console.log(miles(5))
 
 
 
@@ -165,12 +202,11 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
+function feet(cm){
+  return cm * 0.0328084;
     /*add your code here*/
   }
- 
-
-
+  console.log(feet(100))
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 // Let's Sing 99 Bottles of Soda on the Wall!
@@ -181,7 +217,7 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
+function annoyingSong(){
         /*add your code here*/
   }
 
@@ -201,8 +237,22 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+  if (score >=90){
+    return"you got an A";
+  }
+  else if(score < 90 || score >= 80){
+    return" you got a B";
+  }
+  else if (score < 80 || score>=70){
+    return" you got a C";
+  }
+  else if(score < 70 || score>=60) {
+    return "you got a D";
+  }
+  else{
+    return"you got an F";
+  }
   }
   
   
@@ -220,8 +270,8 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter(Hello world) {
+    console.log(vowelCounter.length);
 }
 
 
